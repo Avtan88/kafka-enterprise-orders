@@ -35,22 +35,23 @@ jobs:
         with:
           context: ./producer
           push: true
-          tags: ghcr.io/avtan88/kafka-enterprise-orders/order-producer:latest            ${{ env.GHCR_REGISTRY }}/${{ github.repository }}/order-producer:latest
+          tags: |
+            ${{ env.GHCR_REGISTRY }}/${{ github.repository }}/order-producer:latest
 
       - name: Build & push fraud-service image
         uses: docker/build-push-action@v6
         with:
           context: ./consumers/fraud-service
           push: true
-          tags: ghcr.io/avtan88/kafka-enterprise-orders/order-producer:latest
+          tags: |
             ${{ env.GHCR_REGISTRY }}/${{ github.repository }}/fraud-service:latest
 
       - name: Build & push payment-service image
         uses: docker/build-push-action@v6
-        with: ghcr.io/avtan88/kafka-enterprise-orders/order-producer:latest
+        with:
           context: ./consumers/payment-service
           push: true
-          tags: ghcr.io/avtan88/kafka-enterprise-orders/order-producer:latest
+          tags: |
             ${{ env.GHCR_REGISTRY }}/${{ github.repository }}/payment-service:latest
 
       - name: Build & push analytics-service image
@@ -58,7 +59,7 @@ jobs:
         with:
           context: ./consumers/analytics-service
           push: true
-          tags: ghcr.io/avtan88/kafka-enterprise-orders/order-producer:latest
+          tags: |
             ${{ env.GHCR_REGISTRY }}/${{ github.repository }}/analytics-service:latest
 
       - name: Export image tags
