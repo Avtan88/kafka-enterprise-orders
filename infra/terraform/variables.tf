@@ -25,9 +25,9 @@ variable "container_image_payment" {
   type        = string
 }
 
-variable "container_image_producer" {
+variable "container_image_analytics" {
+  description = "Docker image for analytics service"
   type        = string
-  description = "Docker image for ECS order producer"
 }
 
 variable "confluent_bootstrap_servers" {
@@ -51,10 +51,4 @@ variable "rds_username" {
   description = "RDS master username"
   type        = string
   default     = "orders_user"
-}
-
-variable "rds_password" {
-  description = "RDS master password"
-  type        = string
-  sensitive   = true
 }
