@@ -25,9 +25,9 @@ variable "container_image_payment" {
   type        = string
 }
 
-variable "container_image_analytics" {
-  description = "Docker image for analytics service"
+variable "container_image_producer" {
   type        = string
+  description = "Docker image for ECS order producer"
 }
 
 variable "confluent_bootstrap_servers" {
