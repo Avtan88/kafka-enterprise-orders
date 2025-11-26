@@ -13,8 +13,6 @@ variable "project_name" {
 variable "container_image_producer" {
   description = "Docker image for order producer"
   type        = string
-  description = "Docker image for order producer"
-  default     = "nginx:alpine"
 }
 
 variable "container_image_fraud" {
