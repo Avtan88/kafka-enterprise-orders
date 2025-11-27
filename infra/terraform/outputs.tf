@@ -7,7 +7,7 @@ output "rds_endpoint" {
 }
 
 data "aws_secretsmanager_secret" "rds_password_secret" {
-  name = "rds-master-password-for-project-x"
+  name = "KafkaProject"
 }
 
 data "aws_secretsmanager_secret_version" "rds_password_version" {
