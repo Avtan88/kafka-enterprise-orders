@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>clients/kafka/4.1.10/couchbase-kafka-connector-4.1.10.jar</Key><RequestId>Y7X3KJPHFYNQY1J9</RequestId><HostId>jTSGOixPFtZGETH93jpel+jk6lQAk7b684K1pt6yu6L1uaCQ39XPMu72IvQh4hMIgHpoAkbbusBu/2qf9hRvtuUJlA1pPPFR</HostId></Error>
